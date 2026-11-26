@@ -35,7 +35,7 @@ jobs:
     timeout-minutes: 360
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
 
@@ -92,7 +92,7 @@ jobs:
         run: build-system/WGBuildResign.sh "$BUILD_NUMBER"
 
       - name: Upload the IPA
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: Wraithgram-for-resign-${{ inputs.build_number }}
           path: build-output/ipa/Wraithgram-for-resign.ipa
@@ -101,7 +101,7 @@ jobs:
 
       - name: Upload the build log
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: build-log
           path: ${{ runner.temp }}/wg-build.log
