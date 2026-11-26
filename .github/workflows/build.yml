@@ -67,8 +67,8 @@ jobs:
 
       - name: Write the configuration
         env:
-          API_ID: 39214957
-          API_HASH: 3d52c16750a1981353f829b33c50c841
+          API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           BUNDLE_ID: ${{ inputs.bundle_id }}
         run: |
           python3 - <<'PY'
