@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       bundle_id:
-        description: "Your bundle ID (not ph.telegra.Telegraph), e.g. com.yourname.wraithgram"
+        description: com.westy-69.wraithgram
         required: true
       build_number:
         description: "Build number"
