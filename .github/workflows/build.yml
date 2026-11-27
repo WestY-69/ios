@@ -67,9 +67,9 @@ jobs:
 
       - name: Write the configuration
         env:
-          API_ID: ${{ secrets.TELEGRAM_API_ID }}
-          API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
-          BUNDLE_ID: ${{ inputs.bundle_id }}
+          API_ID: 39214957
+          API_HASH: 3d52c16750a1981353f829b33c50c841
+          BUNDLE_ID: com.westy-69.wraithgram
         run: |
           python3 - <<'PY'
           import json, os
